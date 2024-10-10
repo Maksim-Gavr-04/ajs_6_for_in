@@ -7,7 +7,7 @@ export default [
   {
     // отключение проверок для папок
     ignores: [
-      'dist/', '*.json'
+      'dist/', '*.json', 'eslint.config.mjs'
     ],
   },
   {
@@ -57,13 +57,19 @@ export default [
         'error', 'always'
       ], // пробелы внутри массива - авто
       'array-bracket-newline': [
-        'error', { 'multiline': true, 'minItems': 2 }
+        'error', {
+          'multiline': true, 'minItems': 2
+        }
       ], // перенос элементов массива на новые строки, если многоэлементный - авто
       'object-curly-spacing': [
         'error', 'always'
       ], // пробелы внутри объекта
       'object-curly-newline': [
-        'error', { 'ObjectExpression': { 'multiline': true, 'minProperties': 3 }, }
+        'error', {
+          'ObjectExpression': {
+            'multiline': true, 'minProperties': 3
+          },
+        }
       ], // перенос свойств объекта на новые строки, если много свойств - авто
       'no-multi-spaces': [
         'error',
@@ -89,3 +95,5 @@ export default [
     },
   },
 ];
+
+
